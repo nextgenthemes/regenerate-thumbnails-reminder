@@ -1,12 +1,24 @@
-<?php
-/*
+<?php /*
+
+*******************************************************************************
+
 Plugin Name: Regenerate Thumbnails reminder
-Plugin URI: http://nextgenthemes.com/plugins/
-Description: Checks if your image sizes has changed or there was a new one added, if so it reminds you to go regenerate them. Redirects you to the "Regenerate Thumbnails" Plugin's tool page, but you can use whatever plugin you prefer to regenerate thumbnails (images).
+Plugin URI: http://nextgenthemes.com/plugins/regenerate-thumbnails-reminder/
+Description: Checks if your image sizes has changed or there was a new one added, if so it reminds you to go regenerate them. Redirects you to the "Regenerate Thumbnails" plugin's tool page, but you can use whatever plugin you prefer to regenerate thumbnails (images).
 Version: 1.0
 Author: Nicolas Jonas
 Author URI: http://nextgenthemes.com
 Licence: GPL v3
+
+*******************************************************************************
+
+Copyleft (ɔ) 2013
+_  _ ____ _  _ ___ ____ ____ _  _ ___ _  _ ____ _  _ ____ ____  ____ ____ _  _ 
+|\ | |___  \/   |  | __ |___ |\ |  |  |__| |___ |\/| |___ [__   |    |  | |\/| 
+| \| |___ _/\_  |  |__] |___ | \|  |  |  | |___ |  | |___ ___] .|___ |__| |  | 
+
+*******************************************************************************
+
 */
 
 if ( ! defined( 'ABSPATH' ) )
