@@ -96,20 +96,20 @@ class RegenerateThumbnailsReminder {
 
 		$options['all_image_sizes'] = $this->get_all_image_sizes();
 
-	    update_option( 'regenerate_thumbs_reminder_options', $options );
+		update_option( 'regenerate_thumbs_reminder_options', $options );
 
-	    // if just dismiss was clicked
-	    if ( isset( $_GET["dismiss"] ) ) {
+		// if just dismiss was clicked
+		if ( isset( $_GET["dismiss"] ) ) {
 
-	    	if ( wp_get_referer() )
-	    		wp_redirect( wp_get_referer() );
-	    	else
-	    		wp_redirect( admin_url() );
-	    	exit;
-	    }
+			if ( wp_get_referer() )
+				wp_redirect( wp_get_referer() );
+			else
+				wp_redirect( admin_url() );
+			exit;
+		}
 
-	    wp_redirect( admin_url( 'tools.php?page=regenerate-thumbnails' ) );
-	    exit;
+		wp_redirect( admin_url( 'tools.php?page=regenerate-thumbnails' ) );
+		exit;
 	}
 
 }
