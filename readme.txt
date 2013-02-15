@@ -8,7 +8,7 @@ Stable tag: trunk
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Checks if your image sizes has changed or there was a new one added, if so it reminds you to go regenerate them.
+Checks if your image sizes have changed or there was a new one added, if so it reminds you to go regenerate them.
 
 == Description ==
 
