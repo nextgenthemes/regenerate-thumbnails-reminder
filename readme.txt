@@ -31,6 +31,7 @@ Checks if your image sizes have changed or if there was a new one added, if so i
 = 1.1 =
 
 * Inserted Copyright for propper license
+* Changed the class implementation (no __construct)
 
 = 1.0 =
 

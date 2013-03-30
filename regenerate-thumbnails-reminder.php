@@ -53,9 +53,9 @@ if ( ! defined( 'ABSPATH' ) )
 
 class RegenerateThumbnailsReminder {
 
-	function __construct() {
-		add_action( 'admin_init', array($this, 'action_admin_init') );
-		add_action( 'admin_post_reg_thumb_reminder_apa', array($this, 'admin_post_callback') );
+	function init() {
+		add_action( 'admin_init', array(__CLASS__, 'action_admin_init') );
+		add_action( 'admin_post_reg_thumb_reminder_apa', array(__CLASS__, 'admin_post_callback') );
 	}
 
 	function action_admin_init() {
@@ -64,7 +64,7 @@ class RegenerateThumbnailsReminder {
 		if ( ! current_user_can( 'manage_options' ) )
 			return;
 		
-		$all_image_sizes = $this->get_all_image_sizes();
+		$all_image_sizes = self::get_all_image_sizes();
 
 		$options = get_option( 'regenerate_thumbs_reminder_options', array() );
 
@@ -121,7 +121,7 @@ class RegenerateThumbnailsReminder {
 		if ( ! current_user_can( 'manage_options' ) )
 			return;
 
-		$options['all_image_sizes'] = $this->get_all_image_sizes();
+		$options['all_image_sizes'] = self::get_all_image_sizes();
 
 		update_option( 'regenerate_thumbs_reminder_options', $options );
 
@@ -141,4 +141,4 @@ class RegenerateThumbnailsReminder {
 
 }
 
-$rtr = new RegenerateThumbnailsReminder();
+add_action( 'init', array( 'RegenerateThumbnailsReminder', 'init' ) );
