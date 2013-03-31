@@ -5,7 +5,7 @@
 Plugin Name:  Regenerate Thumbnails reminder
 Plugin URI:   http://nextgenthemes.com/plugins/regenerate-thumbnails-reminder/
 Description:  Checks if your image sizes has changed or there was a new one added, if so it reminds you to go regenerate them. Redirects you to the "Regenerate Thumbnails" plugin's tool page, but you can use whatever plugin you prefer to regenerate thumbnails (images).
-Version:      1.1
+Version:      1.2
 Author:       Nicolas Jonas
 Author URI:   http://nextgenthemes.com
 Licence:      GPLv3 or later
@@ -54,8 +54,8 @@ if ( ! defined( 'ABSPATH' ) )
 class RegenerateThumbnailsReminder {
 
 	function init() {
-		add_action( 'admin_init', array(__CLASS__, 'action_admin_init') );
-		add_action( 'admin_post_reg_thumb_reminder_apa', array(__CLASS__, 'admin_post_callback') );
+		add_action( 'admin_init', array( __CLASS__, 'action_admin_init' ) );
+		add_action( 'admin_post_reg_thumb_reminder_apa', array( __CLASS__, 'admin_post_callback' ) );
 	}
 
 	function action_admin_init() {
@@ -77,7 +77,7 @@ class RegenerateThumbnailsReminder {
 		if( $all_image_sizes == $options['all_image_sizes'] ) {
 			return;
 		} else {
-			add_action( 'admin_notices', array( $this, 'action_admin_notice') );
+			add_action( 'admin_notices', array( __CLASS__, 'action_admin_notice') );
 		}
 	}
 
